@@ -1,238 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy — EngiCalc Pro</title>
-    <style>
-        :root {
-            --primary-color: #1a73e8;
-            --primary-hover: #1557b0;
-            --text-color: #202124;
-            --secondary-text: #5f6368;
-            --bg-color: #f8f9fa;
-            --card-bg: #ffffff;
-            --border-color: #e8eaed;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 16px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: var(--card-bg);
-            padding: 32px;
-            border-radius: 16px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-            border: 1px solid var(--border-color);
-        }
-
-        h1 {
-            color: var(--primary-color);
-            font-size: 28px;
-            margin-top: 0;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 12px;
-            letter-spacing: -0.5px;
-        }
-
-        h2 {
-            color: #3c4043;
-            font-size: 20px;
-            margin-top: 32px;
-            margin-bottom: 12px;
-            padding-bottom: 4px;
-            border-bottom: 1px solid #f1f3f4;
-        }
-
-        p, li {
-            font-size: 15px;
-            color: var(--secondary-text);
-        }
-
-        ul {
-            padding-left: 24px;
-            margin-top: 8px;
-            margin-bottom: 16px;
-        }
-
-        li {
-            margin-bottom: 6px;
-        }
-
-        .toc {
-            background-color: #f1f3f4;
-            padding: 20px;
-            border-radius: 12px;
-            margin: 24px 0;
-        }
-
-        .toc h3 {
-            margin-top: 0;
-            margin-bottom: 12px;
-            font-size: 16px;
-            color: #3c4043;
-        }
-
-        .toc ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-
-        .toc a {
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-            word-break: break-word;
-        }
-
-        a:hover {
-            color: var(--primary-hover);
-            text-decoration: underline;
-        }
-
-        .badge {
-            display: inline-block;
-            background-color: #e8f0fe;
-            color: var(--primary-color);
-            padding: 4px 10px;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-
-        .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
-            font-size: 13px;
-            color: #70757a;
-            text-align: center;
-        }
-
-        @media (max-width: 600px) {
-            body {
-                padding: 8px;
-            }
-            .container {
-                padding: 20px;
-                border-radius: 12px;
-            }
-            h1 {
-                font-size: 24px;
-            }
-            h2 {
-                font-size: 18px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="EngiCalc Pro is a scientific and engineering calculator for students, engineering learners and professionals.">
+  <title>EngiCalc Pro — Scientific & Engineering Calculator</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b1220;
+      --panel: #121d30;
+      --panel-2: #17243a;
+      --text: #f4f7fb;
+      --muted: #aab7ca;
+      --accent: #64a8ff;
+      --accent-2: #8b7cff;
+      --border: rgba(255,255,255,.11);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at 80% 0%, #1b3154 0, transparent 34%), var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1100px, calc(100% - 40px)); margin: auto; }
+    header { padding: 22px 0; border-bottom: 1px solid var(--border); }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.2px; }
+    .logo {
+      width:44px; height:44px; border-radius:13px; display:grid; place-items:center;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2)); color:#07111f;
+      font-size:23px; font-weight:900;
+    }
+    .navlinks { display:flex; flex-wrap:wrap; gap:20px; color:var(--muted); font-size:14px; }
+    .navlinks a { text-decoration:none; }
+    .navlinks a:hover, footer a:hover { color:var(--accent); }
+    .hero { display:grid; grid-template-columns:1.15fr .85fr; gap:54px; align-items:center; padding:82px 0 72px; }
+    .eyebrow { color:#9fc8ff; font-size:13px; font-weight:750; letter-spacing:1.5px; text-transform:uppercase; }
+    h1 { font-size:clamp(42px,6vw,68px); line-height:1.06; letter-spacing:-2px; margin:14px 0 20px; }
+    .gradient { background:linear-gradient(90deg,#82c0ff,#a99aff); -webkit-background-clip:text; background-clip:text; color:transparent; }
+    .lead { color:var(--muted); font-size:18px; max-width:620px; }
+    .actions { display:flex; flex-wrap:wrap; gap:13px; margin-top:28px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; padding:13px 20px; border-radius:12px; text-decoration:none; font-weight:750; border:1px solid var(--border); }
+    .btn.primary { background:linear-gradient(100deg,#69b2ff,#8d83ff); color:#07111f; border:0; }
+    .btn.secondary { background:rgba(255,255,255,.04); }
+    .device {
+      max-width:330px; margin:auto; padding:17px; border-radius:30px;
+      background:linear-gradient(145deg,#293a56,#101827 55%); border:1px solid #52627a;
+      box-shadow:0 28px 80px rgba(0,0,0,.42); transform:rotate(2deg);
+    }
+    .screen { background:#dce8d2; color:#1d3026; border-radius:15px; padding:18px; min-height:112px; font-family:ui-monospace,monospace; }
+    .screen small { display:block; opacity:.7; margin-bottom:13px; }
+    .screen strong { display:block; text-align:right; font-size:27px; }
+    .keys { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-top:14px; }
+    .key { min-height:47px; display:grid; place-items:center; border-radius:10px; background:#26364f; color:#eaf2ff; font-size:13px; font-weight:700; border:1px solid rgba(255,255,255,.08); }
+    .key.blue { background:#315f91; }
+    section { padding:60px 0; }
+    .section-head { max-width:700px; margin-bottom:28px; }
+    h2 { font-size:clamp(28px,4vw,40px); line-height:1.15; margin:0 0 12px; }
+    .section-head p, .muted { color:var(--muted); }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .card { background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.025)); border:1px solid var(--border); border-radius:18px; padding:23px; }
+    .card .icon { font-size:25px; margin-bottom:10px; }
+    .card h3 { margin:0 0 7px; font-size:18px; }
+    .card p { color:var(--muted); margin:0; font-size:14px; }
+    .cta { background:linear-gradient(120deg,rgba(100,168,255,.16),rgba(139,124,255,.13)); border:1px solid var(--border); border-radius:24px; padding:34px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .cta p { color:var(--muted); margin-bottom:0; }
+    footer { border-top:1px solid var(--border); padding:28px 0 36px; color:var(--muted); font-size:14px; }
+    .foot { display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+    footer a { color:var(--text); text-decoration:none; margin-right:16px; }
+    @media (max-width:800px) {
+      .hero { grid-template-columns:1fr; padding:58px 0; gap:38px; }
+      .device { max-width:290px; }
+      .grid { grid-template-columns:repeat(2,1fr); }
+      .cta { align-items:flex-start; flex-direction:column; }
+    }
+    @media (max-width:520px) {
+      .wrap { width:min(100% - 28px,1100px); }
+      .nav { align-items:flex-start; flex-direction:column; }
+      .grid { grid-template-columns:1fr; }
+      h1 { letter-spacing:-1.2px; }
+      section { padding:44px 0; }
+      .cta { padding:25px; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Privacy Policy — EngiCalc Pro</h1>
-        <div class="badge">Effective Date: March 30, 2026</div>
-        <p><strong>Developer:</strong> Krishna Patil Rajput</p>
-        <p><strong>Contact Email:</strong> <a href="mailto:dhanadai.krishna@gmail.com">dhanadai.krishna@gmail.com</a></p>
-
-        <div class="toc">
-            <h3>Table of Contents</h3>
-            <ul>
-                <li><a href="#section1">1. Introduction and Effective Date</a></li>
-                <li><a href="#section2">2. Information the App Processes</a></li>
-                <li><a href="#section3">3. Google AdMob and Advertising</a></li>
-                <li><a href="#section4">4. Local Storage and Calculation History</a></li>
-                <li><a href="#section5">5. App Permissions</a></li>
-                <li><a href="#section6">6. Data Sharing and Third-Party Services</a></li>
-                <li><a href="#section7">7. Data Retention and Deletion</a></li>
-                <li><a href="#section8">8. Children's Privacy</a></li>
-                <li><a href="#section9">9. Data Security</a></li>
-                <li><a href="#section10">10. External Links</a></li>
-                <li><a href="#section11">11. Policy Changes</a></li>
-                <li><a href="#section12">12. Contact Information</a></li>
-            </ul>
-        </div>
-
-        <h2 id="section1">1. Introduction and Effective Date</h2>
-        <p>This Privacy Policy applies to <strong>EngiCalc Pro</strong> ("the Application"), developed by <strong>Krishna Patil Rajput</strong> ("the Developer"). This policy is effective as of <strong>March 30, 2026</strong> and explains how data is handled when you use EngiCalc Pro.</p>
-
-        <h2 id="section2">2. Information the App Processes</h2>
-        <p>EngiCalc Pro is designed primarily as a client-side offline mathematical, statistical, and engineering calculator tool. All user-entered mathematical expressions, dataset numbers, matrices, unit conversion inputs, statistical values, and networking inputs are processed locally on your device. The Application <strong>does not transmit, store on external developer servers, or sell</strong> your mathematical data or calculation inputs.</p>
-
-        <h2 id="section3">3. Google AdMob and Advertising</h2>
-        <p>EngiCalc Pro integrates <strong>Google AdMob</strong> (provided by Google LLC) to serve advertisements. Depending on device settings and applicable privacy choices, Google and its advertising partners may collect and process certain device information independently for ad delivery, measurement, analytics, and fraud prevention.</p>
-        <p>Data processed by Google AdMob SDK may include:</p>
-        <ul>
-            <li>Google Advertising ID (GAID) or device identifiers.</li>
-            <li>Coarse location data derived from IP addresses.</li>
-            <li>Ad interaction metrics and diagnostic performance reports.</li>
-        </ul>
-        <p>For more information about how Google collects and uses data, please review:</p>
-        <ul>
-            <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a></li>
-            <li><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google's Advertising Information</a></li>
-        </ul>
-
-        <h2 id="section4">4. Local Storage and Calculation History</h2>
-        <p>The Application stores calculation history and user preferences (such as Dark Mode theme and default Angle Units) strictly on your device using Android's local Room Database and DataStore Preferences. This data remains under your direct control on your device.</p>
-
-        <h2 id="section5">5. App Permissions</h2>
-        <p>The Application requests standard Android permissions necessary for advertisement delivery and external developer links:</p>
-        <ul>
-            <li><code>INTERNET</code>: Required for fetching AdMob advertisements and launching public developer links when requested by the user.</li>
-            <li><code>ACCESS_NETWORK_STATE</code>: Required to verify active internet connectivity before requesting advertisement content.</li>
-        </ul>
-
-        <h2 id="section6">6. Data Sharing and Third-Party Services</h2>
-        <p>Except for automated processing performed independently by Google AdMob as disclosed in Section 3, the Application does not share, rent, or trade user data with third-party companies or services.</p>
-
-        <h2 id="section7">7. Data Retention and Deletion</h2>
-        <p>Because all calculation history and application preferences are stored locally on your device, you have complete control over data deletion:</p>
-        <ul>
-            <li>You can clear your calculation history at any time through the Application settings.</li>
-            <li>Uninstalling the Application automatically removes all locally stored history and preferences from your device.</li>
-        </ul>
-
-        <h2 id="section8">8. Children's Privacy</h2>
-        <p>EngiCalc Pro is an educational, scientific, and engineering calculator intended for students, engineers, and professionals aged <strong>13 and older</strong>. The Application does not knowingly collect or target personally identifiable information from children under 13 years of age, in compliance with Google Play's Target Audience and Content policies.</p>
-
-        <h2 id="section9">9. Data Security</h2>
-        <p>We prioritize user security. Since user calculation data and mathematical inputs remain localized on your Android device, the risk of external server-side data breaches regarding your mathematical computations is minimized.</p>
-
-        <h2 id="section10">10. External Links</h2>
-        <p>The Application contains optional links to the Developer's public profile platforms:</p>
-        <ul>
-            <li>Portfolio: <a href="https://krishna-patil-rajput.vercel.app/" target="_blank" rel="noopener noreferrer">https://krishna-patil-rajput.vercel.app/</a></li>
-            <li>GitHub Profile: <a href="https://github.com/krishna67890" target="_blank" rel="noopener noreferrer">https://github.com/krishna67890</a></li>
-            <li>Instagram Profile: <a href="https://www.instagram.com/krish_root_labs?stkn=YWczM2t3amUyZ3lp" target="_blank" rel="noopener noreferrer">https://www.instagram.com/krish_root_labs?stkn=YWczM2t3amUyZ3lp</a></li>
-        </ul>
-
-        <h2 id="section11">11. Policy Changes</h2>
-        <p>The Developer may update this Privacy Policy periodically. Any modifications will be posted by updating the "Effective Date" at the top of this page.</p>
-
-        <h2 id="section12">12. Contact Information</h2>
-        <p>If you have any privacy questions, data requests, or inquiries regarding EngiCalc Pro, please contact the Developer directly:</p>
-        <ul>
-            <li><strong>Developer:</strong> Krishna Patil Rajput</li>
-            <li><strong>Direct Email:</strong> <a href="mailto:dhanadai.krishna@gmail.com">dhanadai.krishna@gmail.com</a></li>
-            <li><strong>Portfolio Contact:</strong> <a href="https://krishna-patil-rajput.vercel.app/" target="_blank" rel="noopener noreferrer">https://krishna-patil-rajput.vercel.app/</a></li>
-            <li><strong>GitHub:</strong> <a href="https://github.com/krishna67890" target="_blank" rel="noopener noreferrer">https://github.com/krishna67890</a></li>
-        </ul>
-
-        <div class="footer">
-            <p>© 2026 Krishna Patil Rajput. All rights reserved.</p>
-        </div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#" aria-label="EngiCalc Pro home" style="text-decoration:none">
+        <span class="logo">∑</span>
+        <span>EngiCalc Pro</span>
+      </a>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#download">Download</a>
+      </nav>
     </div>
+  </header>
+
+  <main>
+    <div class="wrap hero">
+      <div>
+        <div class="eyebrow">Scientific · Mathematical · Engineering</div>
+        <h1>Calculate smarter with <span class="gradient">EngiCalc Pro.</span></h1>
+        <p class="lead">A versatile calculator companion for students, engineering learners and professionals. Bring useful scientific and technical calculation tools together in one Android app.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.krishna.engicalcpro" target="_blank" rel="noopener noreferrer">Get it on Google Play ↗</a>
+          <a class="btn secondary" href="#features">Explore features</a>
+        </div>
+      </div>
+      <div class="device" aria-label="Illustrative calculator interface">
+        <div class="screen">
+          <small>ENGICALC PRO · SCIENTIFIC</small>
+          <strong>sin(30) = 0.5</strong>
+        </div>
+        <div class="keys" aria-hidden="true">
+          <div class="key blue">SHIFT</div><div class="key blue">ALPHA</div><div class="key">MODE</div><div class="key">SETUP</div>
+          <div class="key">sin</div><div class="key">cos</div><div class="key">tan</div><div class="key">√</div>
+          <div class="key">(</div><div class="key">)</div><div class="key">x²</div><div class="key">÷</div>
+          <div class="key">7</div><div class="key">8</div><div class="key">9</div><div class="key">×</div>
+          <div class="key">4</div><div class="key">5</div><div class="key">6</div><div class="key">−</div>
+          <div class="key">1</div><div class="key">2</div><div class="key">3</div><div class="key">+</div>
+          <div class="key">0</div><div class="key">.</div><div class="key">Ans</div><div class="key blue">=</div>
+        </div>
+      </div>
+    </div>
+
+    <section id="features">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Tools in one place</div>
+          <h2>Made for everyday technical calculations.</h2>
+          <p>Use the tools available in EngiCalc Pro to support learning, problem-solving and technical work.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><div class="icon">📐</div><h3>Scientific calculations</h3><p>Work with scientific and advanced mathematical operations.</p></article>
+          <article class="card"><div class="icon">📊</div><h3>Statistics</h3><p>Explore statistical calculations and numerical datasets.</p></article>
+          <article class="card"><div class="icon">📏</div><h3>Geometry</h3><p>Access useful geometry-related calculations.</p></article>
+          <article class="card"><div class="icon">⌨️</div><h3>Binary & bitwise</h3><p>Work with binary values and bitwise operations.</p></article>
+          <article class="card"><div class="icon">🌐</div><h3>Networking tools</h3><p>Use networking-related calculation utilities.</p></article>
+          <article class="card"><div class="icon">🔁</div><h3>Conversions & formulas</h3><p>Find unit and currency conversion tools alongside useful formulas.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">About the app</div>
+          <h2>A practical companion for learners and problem-solvers.</h2>
+          <p>EngiCalc Pro is designed to bring multiple calculation utilities into one convenient Android experience. Whether you are studying mathematics, learning engineering concepts or handling technical calculations, the app aims to make common tools easier to access.</p>
+        </div>
+        <div class="card">
+          <h3>Developer</h3>
+          <p><strong style="color:var(--text)">Krishna Patil Rajput</strong><br>Android app developer</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="download">
+      <div class="wrap">
+        <div class="cta">
+          <div>
+            <div class="eyebrow">Available on Android</div>
+            <h2>Try EngiCalc Pro.</h2>
+            <p>Download the app from its official Google Play listing.</p>
+          </div>
+          <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.krishna.engicalcpro" target="_blank" rel="noopener noreferrer">Download on Google Play ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <div>© 2026 Krishna Patil Rajput. EngiCalc Pro.</div>
+      <div>
+        <a href="https://krishna67890.github.io/engicalc-pro-legal/" target="_blank" rel="noopener noreferrer">Privacy Policy & Terms</a>
+        <a href="https://play.google.com/store/apps/details?id=com.krishna.engicalcpro" target="_blank" rel="noopener noreferrer">Google Play</a>
+        <a href="mailto:dhanadai.krishna@gmail.com">Contact</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
